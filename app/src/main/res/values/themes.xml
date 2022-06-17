@@ -14,7 +14,22 @@
         <item name="android:windowLightStatusBar" tools:targetApi="o">true</item>
         <!-- Customize your theme here. -->
 
+        <item name="AppBackground">#D9FFFFFF</item>
+        <item name="BottomBarBackgroundColor">@color/white</item>
+        <item name="Bookmark_color">@color/black</item>
+        <item name="fab_background">@color/white</item>
+        <item name="subHeading_color">@color/text_color</item>
+        <item name="Heading_color">#E6000000</item>
+        <item name="BottomBarIconTintActive">@color/light_blue2</item>
+        <item name="BottomBarIndicatorColor">@color/blue_tint</item>
+        <item name="BottomBarTextColor">@color/light_blue</item>
+        <item name="IconTint">@color/black</item>
+        <item name="DeleteButtonIcon">@drawable/ic_trash_2</item>
+        <item name="SearchButtonIcon">@drawable/ic_search_icon</item>
+        <item name="ButtonBackground">@color/white</item>
+
     </style>
+
 
     <style name="SplashScreenTheme"  parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen_back</item>

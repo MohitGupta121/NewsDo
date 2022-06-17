@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/AppBackground"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.SearchFragment">
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/search_edit_layout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="gravity"
+        android:visibility="gone"
+        app:boxBackgroundColor="?attr/fab_background"
+        app:boxBackgroundMode="filled"
+        app:boxCollapsedPaddingTop="0dp"
+        app:boxStrokeWidth="0dp"
+        app:counterTextColor="@color/light_grey"
+        app:endIconMode="clear_text"
+        app:placeholderText="Search News"
+        app:startIconDrawable="@drawable/ic_search_icon"
+        app:startIconTint="@color/light_blue">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/search_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="0dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="10dp"
+            >
+            <ImageButton
+                android:id="@+id/ib_clear_selection"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/transparent"
+                android:contentDescription="clear selection mode"
+                android:src="@drawable/ic_baseline_clear_24"
+                app:tint="?attr/IconTint"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/top_bar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="Categories"
+                android:layout_marginStart="10dp"
+                android:layout_gravity="center"
+                android:textColor="?attr/Heading_color"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="search news"
+            android:src="@drawable/ic_search_icon" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        app:spb_color="@color/light_blue"
+        app:spb_colors="@array/mycolors"
+        app:spb_mirror_mode="true"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.5"
+        app:spb_progressiveStop_speed="3.4"
+        app:spb_reversed="true"
+        app:spb_sections_count="4"
+        app:spb_speed="2.0"
+        app:spb_stroke_separator_length="4dp"
+        app:spb_stroke_width="4dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/category_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:visibility="gone"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <include
+            android:id="@+id/category_grid_view"
+            layout="@layout/categories_layout" />
+
+    </ScrollView>
+
+</LinearLayout>
