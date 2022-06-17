@@ -1,7 +1,7 @@
 package com.mohit.newsdo.api
 
-import android.provider.Contacts.SettingsColumns.KEY
-import com.mohitsharma.virtualnews.model.NewsResponse
+import com.mohit.newsdo.model.NewsResponse
+import com.mohit.newsdo.util.Constants.api
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -15,7 +15,7 @@ interface NewsAPI {
         @Query("page")
         pageCount:Int = 1,
         @Query("apikey")
-        key: String = KEY.value,
+        key: String = api,
         @Query("category")
         category:String? = null
     ):Response<NewsResponse>
@@ -27,6 +27,6 @@ interface NewsAPI {
         @Query("page")
         pageCount:Int = 1,
         @Query("apikey")
-        key: String = KEY.value
+        key: String = api
     ):Response<NewsResponse>
 }

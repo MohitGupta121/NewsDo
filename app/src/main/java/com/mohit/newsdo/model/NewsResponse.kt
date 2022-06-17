@@ -1,4 +1,4 @@
-package com.mohitsharma.virtualnews.model
+package com.mohit.newsdo.model
 
 data class NewsResponse(
         var articles: MutableList<Article>,

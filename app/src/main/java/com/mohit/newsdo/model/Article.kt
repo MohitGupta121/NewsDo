@@ -1,4 +1,4 @@
-package com.mohitsharma.virtualnews.model
+package com.mohit.newsdo.model
 
 import androidx.room.Entity
 import androidx.room.Index

@@ -1,4 +1,4 @@
-package com.mohitsharma.virtualnews.model
+package com.mohit.newsdo.model
 
 data class Source(
     val id: String,

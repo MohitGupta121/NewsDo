@@ -84,23 +84,12 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <fr.castorflex.android.circularprogressbar.CircularProgressBar
+    <com.google.android.material.progressindicator.CircularProgressIndicator
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        android:visibility="gone"
-        app:spb_color="@color/light_blue"
-        app:spb_colors="@array/mycolors"
-        app:spb_mirror_mode="true"
-        app:spb_progressiveStart_activated="true"
-        app:spb_progressiveStart_speed="1.5"
-        app:spb_progressiveStop_speed="3.4"
-        app:spb_reversed="true"
-        app:spb_sections_count="4"
-        app:spb_speed="2.0"
-        app:spb_stroke_separator_length="4dp"
-        app:spb_stroke_width="4dp" />
+        android:visibility="gone" />
 
 
     <androidx.recyclerview.widget.RecyclerView
