@@ -41,7 +41,7 @@
         android:layout_height="match_parent" />
 
 
-    <com.google.android.material.progressindicator.CircularProgressIndicator
+    <androidx.core.widget.ContentLoadingProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="50dp"
         android:layout_height="50dp"
