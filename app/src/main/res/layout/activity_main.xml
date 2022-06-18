@@ -29,6 +29,8 @@
         app:exb_backgroundColor="?attr/BottomBarBackgroundColor"
         app:exb_backgroundCornerRadius="20dp"
         app:exb_elevation="8dp"
+        app:exb_item_horizontal_margin="@dimen/margin_medium"
+        app:exb_item_vertical_margin="@dimen/margin_small"
         app:exb_itemInactiveColor="?attr/IconTint"
         app:exb_items="@menu/menu_bottom"
         app:layout_constraintBottom_toBottomOf="parent"
