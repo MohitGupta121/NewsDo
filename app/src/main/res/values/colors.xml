@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_grey">#121212</color>
+    <color name="light_blue2">#2E5BFF</color>
+    <color name="light_blue">#4285F4</color>
+    <color name="blue_tint">#D5DEFF</color>
+    <color name="light_grey">#2D2E30</color>
+    <color name="grey_bold">#A8A8B0</color>
+    <color name="text_color">#8B8C90</color>
+    <color name="dark_blue">#394456</color>
+    <color name="blue_shade">#432979FF</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="reply_blue_800">#232F34</color>
+    <color name="red">#EA4335</color>
+    <color name="red_400">#EF5350</color>
+</resources>

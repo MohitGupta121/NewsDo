@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_saved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="?attr/fab_background"
+        android:clickable="true"
+        android:contentDescription="@string/bookmark"
+        android:focusable="true"
+        android:src="@drawable/ic_icons8_bookmark_outline"
+        app:layout_anchor="@id/iv_content_image"
+        app:layout_anchorGravity="bottom|end" />
+    <ImageButton
+        android:id="@+id/ib_share_article"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_share_flat_icon"
+        app:layout_anchor="@id/iv_content_image"
+        app:layout_anchorGravity="end"
+        android:layout_margin="20dp"
+        android:background="@color/transparent"
+        android:elevation="4dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/AppBackground"
+        android:orientation="vertical">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/iv_content_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:contentDescription="@string/article_image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="35dp"
+            android:background="?attr/AppBackground"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tv_headline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:paddingBottom="8dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:text="@string/headline_dummy_text"
+                android:textColor="?attr/Heading_color"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:paddingBottom="16dp"
+                android:text="@string/content_dummy_text"
+                android:textColor="?attr/subHeading_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_swipe_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:text="@string/swipe_left_to_view_full_article"
+                android:textColor="?attr/subHeading_color"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:maxEms="20"
+                android:maxLines="1"
+                android:text="@string/author_dummy_text"
+                android:textColor="#989EA3"
+                android:textSize="20sp"
+                android:typeface="serif" />
+
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:text="@string/date_dummy_text"
+                android:textColor="?attr/subHeading_color"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+

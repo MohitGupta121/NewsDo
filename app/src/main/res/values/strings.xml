@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">NewsDo</string>
+    <string name="article_image_description">Article Image</string>
+    <string name="swipe_left_to_view_full_article">swipe left for full article >></string>
+    <string name="menu_item_saved">Saved</string>
+    <string name="menu_item_home">Home</string>
+    <string name="menu_item_search">Discover</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="headline_dummy_text">Black clover is finally out</string>
+    <string name="content_dummy_text">after a long wait of 1 year finally black clover dcdfdf .</string>
+    <string name="author_dummy_text">Mohit gupta</string>
+    <string name="date_dummy_text">25 oct 2020</string>
+    <string name="saved_headline_dummy_text">Solo Leveling Chapter 125 release date,time and potential spoilers..</string>
+    <string name="saved_date_dummy_text">31 oct 2020</string>
+</resources>

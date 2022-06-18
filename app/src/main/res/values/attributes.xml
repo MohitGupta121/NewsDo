@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="declare_styleable">
+
+        <attr name="BottomBarBackgroundColor" format="color"/>
+        <attr name="Bookmark_color" format="color"/>
+        <attr name="fab_background" format="color"/>
+        <attr name="subHeading_color" format="color"/>
+        <attr name="Heading_color" format="color"/>
+        <attr name="BottomBarIconTintActive" format="color"/>
+        <attr name="BottomBarIndicatorColor" format="color"/>
+        <attr name="BottomBarTextColor" format="color"/>
+        <attr name="IconTint" format="color"/>
+        <attr name="AppBackground" format="color"/>
+        <attr name="ButtonBackground" format="color"/>
+        <attr name="DeleteButtonIcon" format="reference"/>
+        <attr name="SearchButtonIcon" format="reference"/>
+        <attr name="noInternetDrawable" format="reference" />
+    </declare-styleable>
+</resources>
