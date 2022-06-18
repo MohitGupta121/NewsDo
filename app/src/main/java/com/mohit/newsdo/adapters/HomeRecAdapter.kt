@@ -3,6 +3,7 @@ package com.mohit.newsdo.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.viewModelScope
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -13,15 +14,21 @@ import com.mohit.newsdo.R
 import com.mohit.newsdo.model.Article
 import com.mohit.newsdo.ui.NewsViewModel
 import com.mohit.newsdo.util.share
+import com.mohit.newsdo.util.showArticleInWebView
+import com.mohit.newsdo.util.toast
 import kotlinx.android.synthetic.main.item_article.view.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
-class HomeRecyclerViewAdapter( var viewModel: NewsViewModel) : RecyclerView.Adapter<HomeRecyclerViewAdapter.ViewHolder>() {
+
+class HomeRecAdapter( var viewModel: NewsViewModel) : RecyclerView.Adapter<HomeRecAdapter.ViewHolder>() {
+
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder = ViewHolder(
-        LayoutInflater.from(parent.context)
-            .inflate(R.layout.item_article, parent, false)
+            LayoutInflater.from(parent.context)
+                    .inflate(R.layout.item_article, parent, false)
     )
 
 
@@ -35,9 +42,13 @@ class HomeRecyclerViewAdapter( var viewModel: NewsViewModel) : RecyclerView.Adap
             val s = "Click to view more at ${article.source.name}"
             tv_swipe_left.text = s
             tv_swipe_left.setOnClickListener {
-                // Open Article in WebView
+              context.showArticleInWebView(article)
             }
-
+            viewModel.viewModelScope.launch(Dispatchers.Main) {
+                if (viewModel.isArticleSaved(article)) {
+                    fab_saved.setImageResource(R.drawable.ic_icons8_bookmark)
+                }
+            }
             Glide.with(this)
                 .load(article.urlToImage)
                 .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
@@ -46,7 +57,11 @@ class HomeRecyclerViewAdapter( var viewModel: NewsViewModel) : RecyclerView.Adap
                 .placeholder(resources.getDrawable(R.drawable.photo_placeholder, null))
                 .error(R.drawable.photo_placeholder)
                 .into(iv_content_image)
-
+            fab_saved.setOnClickListener {
+                viewModel.saveArticle(article)
+                context.toast("Saved")
+                notifyDataSetChanged()
+            }
             ib_share_article.setOnClickListener {
                 context.share(article)
             }
@@ -60,6 +75,8 @@ class HomeRecyclerViewAdapter( var viewModel: NewsViewModel) : RecyclerView.Adap
 
     }
     val differ = AsyncListDiffer(this, differCallback)
+
+
 
     override fun getItemCount(): Int = differ.currentList.size
 

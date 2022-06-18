@@ -137,5 +137,6 @@ dependencies {
     //zoomable Phot viewer
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
 
+    debugImplementation "io.requestly.rqinterceptor:library:1.1.5"
 
 }

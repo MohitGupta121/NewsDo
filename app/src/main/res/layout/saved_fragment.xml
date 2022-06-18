@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragments.SavedFragment">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/saved_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="10dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="10dp"
+            android:text="Saved News"
+            android:textColor="?attr/Heading_color"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="10dp"
+            android:background="@color/transparent"
+            android:contentDescription="delete all saved news"
+            android:src="?attr/DeleteButtonIcon" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/saved_selection_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="@color/light_blue"
+        app:cardCornerRadius="0dp">
+
+        <ImageButton
+            android:id="@+id/ib_clear_selection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_margin="10dp"
+            android:background="@color/light_blue"
+            android:contentDescription="clear selection mode"
+            android:src="@drawable/ic_baseline_clear_24" />
+
+        <TextView
+            android:id="@+id/tv_item_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_marginStart="40dp"
+            android:fontFamily="sans-serif-medium"
+            android:paddingStart="10dp"
+            android:text="1"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <ImageButton
+            android:id="@+id/btn_delete_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:layout_marginEnd="10dp"
+            android:background="@color/light_blue"
+            android:contentDescription="delete selected saved news"
+            android:src="@drawable/ic_trash_2_white" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/saved_rec_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="?attr/AppBackground"
+        app:fastScrollEnabled="true"
+        app:fastScrollHorizontalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollHorizontalTrackDrawable="@drawable/line_drawable"
+        app:fastScrollVerticalThumbDrawable="@drawable/thumb_drawable"
+        app:fastScrollVerticalTrackDrawable="@drawable/line_drawable" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_no_saved_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:scaleType="centerInside"
+        android:visibility="gone"
+        app:srcCompat="@drawable/undraw_empty_xct9" />
+
+
+</LinearLayout>
