@@ -7,5 +7,15 @@
         android:id="@+id/homeFragment"
         android:name="com.mohit.newsdo.ui.fragments.HomeFragment"
         android:label="home_fragment"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/home_fragment" />
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.mohit.newsdo.ui.fragments.SavedFragment"
+        android:label="saved_fragment"
+        tools:layout="@layout/saved_fragment" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mohit.newsdo.ui.fragments.SearchFragment"
+        android:label="search_fragment"
+        tools:layout="@layout/search_fragment" />
 </navigation>

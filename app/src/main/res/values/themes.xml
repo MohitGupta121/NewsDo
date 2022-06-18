@@ -13,6 +13,7 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <item name="android:windowLightStatusBar" tools:targetApi="o">true</item>
         <!-- Customize your theme here. -->
+        <item name="switchStyle">@style/Widget.App.Switch</item>
 
         <item name="AppBackground">#D9FFFFFF</item>
         <item name="BottomBarBackgroundColor">@color/white</item>
@@ -30,8 +31,27 @@
 
     </style>
 
+    <style name="CustomMaterialDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <!-- Background Color-->
+        <item name="android:background">@color/white</item>
+        <!-- Text Color for title and message -->
+        <item name="colorOnSurface">@color/black</item>
+        <!-- Text Color for buttons -->
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <style name="Widget.App.Switch" parent="Widget.MaterialComponents.CompoundButton.Switch">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.Switch</item>
+    </style>
+
+    <style name="ThemeOverlay.App.Switch" parent="">
+
+        <item name="colorSecondary">@color/light_blue</item>
+    </style>
 
     <style name="SplashScreenTheme"  parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@drawable/splash_screen_back</item>
+    <item name="android:windowBackground">@drawable/splash_screen_back</item>
     </style>
+
+
 </resources>

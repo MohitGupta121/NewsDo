@@ -13,4 +13,5 @@ abstract class BaseFragment(layout: Int) : Fragment(layout) {
         super.onViewCreated(view, savedInstanceState)
         viewModel = (activity as MainActivity).viewModel
     }
+
 }

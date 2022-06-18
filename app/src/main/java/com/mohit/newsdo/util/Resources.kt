@@ -1,5 +1,6 @@
 package com.mohit.newsdo.util
 
+
 sealed class Resources<T>(
         val data: T? = null,
         val message: String? = null) {

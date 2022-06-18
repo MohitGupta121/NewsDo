@@ -1,9 +1,8 @@
-package com.mohitsharma.virtualnews.database
+package com.mohit.newsdo.database
 
-import android.database.Cursor
 import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.mohitsharma.virtualnews.model.Article
+import com.mohit.newsdo.model.Article
 
 @Dao
 interface ArticleDao {

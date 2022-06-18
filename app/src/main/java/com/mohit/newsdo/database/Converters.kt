@@ -1,7 +1,7 @@
-package com.mohitsharma.virtualnews.database
+package com.mohit.newsdo.database
 
 import androidx.room.TypeConverter
-import com.mohitsharma.virtualnews.model.Source
+import com.mohit.newsdo.model.Source
 
 class Converters {
 

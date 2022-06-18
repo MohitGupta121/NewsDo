@@ -26,7 +26,8 @@
         app:layout_anchorGravity="end"
         android:layout_margin="20dp"
         android:background="@color/transparent"
-        android:elevation="4dp" />
+        android:elevation="4dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +35,7 @@
         android:background="?attr/AppBackground"
         android:orientation="vertical">
 
-        <ImageView
+        <com.github.chrisbanes.photoview.PhotoView
             android:id="@+id/iv_content_image"
             android:layout_width="match_parent"
             android:layout_height="300dp"
@@ -96,6 +97,7 @@
                 android:textColor="#989EA3"
                 android:textSize="20sp"
                 android:typeface="serif" />
+
 
             <TextView
                 android:id="@+id/tv_date"

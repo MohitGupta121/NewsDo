@@ -2,30 +2,37 @@ package com.mohit.newsdo.ui.fragments
 
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.viewpager2.widget.ViewPager2
 import com.mohit.newsdo.R
-import com.mohit.newsdo.adapters.HomeRecyclerViewAdapter
-import com.mohit.newsdo.util.DepthPageTransformer
-import com.mohit.newsdo.util.Resources
-import com.mohit.newsdo.util.hide
-import com.mohit.newsdo.util.show
-import kotlinx.android.synthetic.main.fragment_home.*
+import com.mohit.newsdo.adapters.HomeRecAdapter
+import com.mohit.newsdo.util.*
+import kotlinx.android.synthetic.main.home_fragment.*
 
-class HomeFragment : BaseFragment(R.layout.fragment_home) {
 
-    lateinit var adapter: HomeRecyclerViewAdapter
+class HomeFragment : BaseFragment(R.layout.home_fragment) {
+    lateinit var adapter: HomeRecAdapter
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        adapter = HomeRecyclerViewAdapter(viewModel)
+        adapter = HomeRecAdapter(viewModel)
         setUpVIewPager()
         observeBreakingNews()
 
         btn_retry.setOnClickListener {
-            viewModel.getBreakingNews("in")
+             viewModel.getBreakingNews("in")
         }
+
+        viewModel.currentCountryLiveData.observe(viewLifecycleOwner, Observer {
+            adapter.differ.currentList.apply {
+                if (this.isEmpty()) {
+                    viewModel.getBreakingNews(it)
+                }
+                if (!this.containsAll(this))
+                    viewModel.getBreakingNews(it)
+            }
+            viewModel.currentCountry = it
+        })
 
     }
 
@@ -48,7 +55,7 @@ class HomeFragment : BaseFragment(R.layout.fragment_home) {
                 }
                 is Resources.Error -> {
                     progress_bar.hide()
-                    Toast.makeText(requireContext(), "Something went wrong!", Toast.LENGTH_SHORT).show()
+                    requireContext().toast("Something went wrong!")
                     btn_retry.show()
                     retry_view.show()
                 }

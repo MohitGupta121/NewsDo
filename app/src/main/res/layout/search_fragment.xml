@@ -49,26 +49,26 @@
             android:layout_gravity="start|center"
             android:layout_marginStart="10dp"
             >
-            <ImageButton
-                android:id="@+id/ib_clear_selection"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:background="@color/transparent"
-                android:contentDescription="clear selection mode"
-                android:src="@drawable/ic_baseline_clear_24"
-                app:tint="?attr/IconTint"
-                android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/ib_clear_selection"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/transparent"
+            android:contentDescription="clear selection mode"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:tint="?attr/IconTint"
+            android:visibility="gone" />
 
-            <TextView
-                android:id="@+id/top_bar_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-medium"
-                android:text="Categories"
-                android:layout_marginStart="10dp"
-                android:layout_gravity="center"
-                android:textColor="?attr/Heading_color"
-                android:textSize="25sp" />
+        <TextView
+            android:id="@+id/top_bar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="Categories"
+            android:layout_marginStart="10dp"
+            android:layout_gravity="center"
+            android:textColor="?attr/Heading_color"
+            android:textSize="25sp" />
 
         </LinearLayout>
         <ImageButton
@@ -84,13 +84,23 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <androidx.core.widget.ContentLoadingProgressBar
+    <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        android:visibility="gone" />
-
+        android:visibility="gone"
+        app:spb_color="@color/light_blue"
+        app:spb_colors="@array/mycolors"
+        app:spb_mirror_mode="true"
+        app:spb_progressiveStart_activated="true"
+        app:spb_progressiveStart_speed="1.5"
+        app:spb_progressiveStop_speed="3.4"
+        app:spb_reversed="true"
+        app:spb_sections_count="4"
+        app:spb_speed="2.0"
+        app:spb_stroke_separator_length="4dp"
+        app:spb_stroke_width="4dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_rec_view"
