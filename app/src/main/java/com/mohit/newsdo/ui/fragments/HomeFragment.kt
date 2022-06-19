@@ -23,16 +23,16 @@ class HomeFragment : BaseFragment(R.layout.home_fragment) {
              viewModel.getBreakingNews("in")
         }
 
-        viewModel.currentCountryLiveData.observe(viewLifecycleOwner, Observer {
+//        viewModel.currentCountryLiveData.observe(viewLifecycleOwner, Observer {
             adapter.differ.currentList.apply {
                 if (this.isEmpty()) {
-                    viewModel.getBreakingNews(it)
+                    viewModel.getBreakingNews("in")
                 }
                 if (!this.containsAll(this))
-                    viewModel.getBreakingNews(it)
+                    viewModel.getBreakingNews("in")
             }
-            viewModel.currentCountry = it
-        })
+            viewModel.currentCountry = "in"
+//        })
 
     }
 

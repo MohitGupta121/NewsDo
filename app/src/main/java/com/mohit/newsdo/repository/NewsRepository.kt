@@ -25,6 +25,6 @@ class NewsRepository (val context: Context,private val db:ArticleDatabase){
 
     suspend fun deleteAllArticles() = db.getArticleDao().deleteAllArticle()
 
-    fun getDataStore() = DataStoreRepository(context)
+//    fun getDataStore() = DataStoreRepository(context)
 
 }
