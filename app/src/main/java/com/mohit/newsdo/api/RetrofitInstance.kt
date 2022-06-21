@@ -30,12 +30,3 @@ class RetrofitInstance {
         }
     }
 }
-//object RetrofitInstance {
-//
-//    fun news(): NewsAPI =
-//        Retrofit.Builder()
-//            .baseUrl(BASE_URL)
-//            .addConverterFactory(GsonConverterFactory.create())
-//            .build()
-//            .create(NewsAPI::class.java)
-//}
