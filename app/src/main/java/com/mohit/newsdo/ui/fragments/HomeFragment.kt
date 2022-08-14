@@ -7,6 +7,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.HomeRecAdapter
 import com.mohit.newsdo.util.*
+import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
@@ -23,16 +24,16 @@ class HomeFragment : BaseFragment(R.layout.home_fragment) {
              viewModel.getBreakingNews("in")
         }
 
-//        viewModel.currentCountryLiveData.observe(viewLifecycleOwner, Observer {
+        viewModel.currentCountryLiveData.observe(viewLifecycleOwner, Observer {
             adapter.differ.currentList.apply {
                 if (this.isEmpty()) {
-                    viewModel.getBreakingNews("in")
+                    viewModel.getBreakingNews(it)
                 }
                 if (!this.containsAll(this))
-                    viewModel.getBreakingNews("in")
+                    viewModel.getBreakingNews(it)
             }
-            viewModel.currentCountry = "in"
-//        })
+            viewModel.currentCountry = it
+        })
 
     }
 

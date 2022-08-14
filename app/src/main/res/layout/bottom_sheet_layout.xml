@@ -196,7 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="by Mohit Sharma"
+        android:text="by Mohit Gupta"
         android:textColor="?attr/Heading_color"
         android:textSize="16sp" />
 

@@ -27,7 +27,7 @@ class NewsViewModel(private val newsRepository: NewsRepository) : ViewModel() {
 
     var savedNewsLiveData: LiveData<List<Article>>
     var currentNewsPosition = 0
-//    val currentCountryLiveData =  newsRepository.getDataStore().readCountryFromDataStore.asLiveData()
+    val currentCountryLiveData =  newsRepository.getDataStore().readCountryFromDataStore.asLiveData()
 
     var currentCountry ="in"
 

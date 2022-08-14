@@ -1,4 +1,4 @@
-package com.mohit.newsdo.ui.fragments
+package com.mohitsharma.virtualnews.ui.fragments
 
 import android.os.Bundle
 import android.view.View

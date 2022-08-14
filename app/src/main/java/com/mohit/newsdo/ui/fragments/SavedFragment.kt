@@ -6,12 +6,16 @@ import androidx.activity.addCallback
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.SavedRecAdapter
 import com.mohit.newsdo.model.Article
 import com.mohit.newsdo.util.*
+import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
+import com.mohit.newsdo.util.swipeDetector.ItemTouchHelperCallback
+import com.mohit.newsdo.util.swipeDetector.RecyclerViewSwipe
 import kotlinx.android.synthetic.main.saved_fragment.*
 
 
@@ -97,6 +101,29 @@ class SavedFragment : BaseFragment(R.layout.saved_fragment) {
     private fun setUpRecyclerView() {
         savedAdapter = SavedRecAdapter(viewModel)
         saved_rec_view.setUpWithAdapter(requireContext(), savedAdapter)
+        val simpleCallBack = ItemTouchHelperCallback(object : RecyclerViewSwipe {
+            override fun onSwipeLeft(viewHolder: RecyclerView.ViewHolder) {
+                val position = viewHolder.adapterPosition
+                val currentArticle = savedAdapter.savedDiffer.currentList[position]
+                deleteArticle(currentArticle)
+            }
+
+            override fun onSwipeRight(viewHolder: RecyclerView.ViewHolder) {
+                val position = viewHolder.adapterPosition
+                val currentArticle = savedAdapter.savedDiffer.currentList[position]
+                requireContext().share(currentArticle)
+                savedAdapter.notifyDataSetChanged()
+            }
+
+            override fun addSwipeLeftBackgroundColor(): Int = requireContext().getColor(R.color.red_400)
+
+            override fun addSwipeRightBackgroundColor(): Int = requireContext().getColor(R.color.transparent)
+
+            override fun addSwipeLeftActionIcon(): Int = R.drawable.ic_trash_2_white
+        })
+
+        itemTouchHelper = ItemTouchHelper(simpleCallBack)
+        itemTouchHelper.attachToRecyclerView(saved_rec_view)
     }
 
     private fun deleteArticle(article: Article) {

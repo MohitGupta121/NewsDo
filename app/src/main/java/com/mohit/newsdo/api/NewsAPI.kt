@@ -1,7 +1,7 @@
 package com.mohit.newsdo.api
 
 import com.mohit.newsdo.model.NewsResponse
-import com.mohit.newsdo.util.Constants.api
+import com.mohit.newsdo.util.Constants.KEY
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -15,7 +15,7 @@ interface NewsAPI {
             @Query("page")
             pageCount:Int = 1,
             @Query("apikey")
-            key: String = api,
+            key: String = KEY,
             @Query("category")
             category:String? = null
     ):Response<NewsResponse>
@@ -27,6 +27,6 @@ interface NewsAPI {
             @Query("page")
             pageCount:Int = 1,
             @Query("apikey")
-            key: String = api
+            key: String = KEY
     ):Response<NewsResponse>
 }

@@ -14,15 +14,15 @@ import com.mohit.newsdo.model.Article
 @TypeConverters(Converters::class)
 abstract class ArticleDatabase:RoomDatabase() {
 
-    abstract fun getArticleDao():ArticleDao
+    abstract fun getArticleDao(): ArticleDao
 
     companion object{
         @Volatile
         private var instance: ArticleDatabase? = null
         private val LOCK = Any()
 
-        operator fun invoke(context: Context) = instance?: synchronized(LOCK){
-            instance?: createDatabase(context).also{
+        operator fun invoke(context: Context) = instance ?: synchronized(LOCK){
+            instance ?: createDatabase(context).also{
                 instance = it
             }
         }
