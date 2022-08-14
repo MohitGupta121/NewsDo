@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_back"
+    android:elevation="16dp"
+    android:paddingStart="10dp"
+    android:paddingEnd="15dp"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <ImageButton
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/transparent"
+        android:src="@drawable/expnadable_bar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="5dp"
+        android:text="Settings"
+        android:textColor="?attr/Heading_color"
+        android:textSize="22sp" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/enable_dark_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="?attr/fab_background"
+        app:cardElevation="0dp">
+
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/nightModeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+
+             />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Dark Mode"
+            android:textColor="?attr/Heading_color"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/choose_country"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="?attr/fab_background"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Change Country"
+            android:textColor="?attr/Heading_color"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_margin="10dp"
+            android:visibility="gone"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_globe" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_selectedCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_margin="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="India"
+            android:background="@drawable/rounded_back"
+            android:textColor="?attr/Heading_color"
+            android:textSize="20sp" />
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btn_shareApp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="?attr/fab_background"
+        app:cardElevation="0dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_share_2" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Share App"
+            android:textColor="?attr/Heading_color"
+            android:textSize="20sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardBackgroundColor="?attr/fab_background"
+        app:cardElevation="0dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Feedback"
+            android:textColor="?attr/Heading_color"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:layout_margin="10dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_message_square" />
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="#707070"
+        android:layout_margin="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="Virtual News"
+            android:textColor="?attr/Heading_color"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="by Mohit Sharma"
+        android:textColor="?attr/Heading_color"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="5dp"
+        android:text="version 1.0.0"
+        android:textColor="?attr/subHeading_color"
+        android:textSize="16sp" />
+
+
+</LinearLayout>
