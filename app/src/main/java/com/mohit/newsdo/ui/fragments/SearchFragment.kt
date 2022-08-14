@@ -6,19 +6,26 @@ import android.view.inputmethod.EditorInfo
 import androidx.activity.addCallback
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.daimajia.androidanimations.library.Techniques
 import com.daimajia.androidanimations.library.YoYo
+import com.google.android.material.snackbar.Snackbar
 import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.SearchRecAdapter
 import com.mohit.newsdo.util.*
+import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
 import com.mohit.newsdo.util.Constants.SEARCH_DELAY_TIME
+import com.mohit.newsdo.util.swipeDetector.ItemTouchHelperCallback
+import com.mohit.newsdo.util.swipeDetector.RecyclerViewSwipe
 import kotlinx.android.synthetic.main.categories_layout.*
 import kotlinx.android.synthetic.main.search_fragment.*
 import kotlinx.android.synthetic.main.search_fragment.ib_clear_selection
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlin.text.format
 
 class SearchFragment : BaseFragment(R.layout.search_fragment) {
 
@@ -32,11 +39,13 @@ class SearchFragment : BaseFragment(R.layout.search_fragment) {
         search_rec_view.apply {
             adapter = searchAdapter
             layoutManager = LinearLayoutManager(requireContext())
+            ItemTouchHelper(getItemTouchHelperCallBack(searchAdapter)).attachToRecyclerView(this)
         }
         categoryAdapter = SearchRecAdapter()
         category_rec_view.apply {
             adapter = categoryAdapter
             layoutManager = LinearLayoutManager(requireContext())
+            ItemTouchHelper(getItemTouchHelperCallBack(categoryAdapter)).attachToRecyclerView(this)
         }
 
         observeSearchNews()
@@ -213,5 +222,32 @@ class SearchFragment : BaseFragment(R.layout.search_fragment) {
             }
         }
     }
+
+    private fun getItemTouchHelperCallBack(adapter: SearchRecAdapter) = ItemTouchHelperCallback(object :
+        RecyclerViewSwipe {
+        override fun onSwipeLeft(viewHolder: RecyclerView.ViewHolder) {
+            val position = viewHolder.adapterPosition
+            val currentArticle = adapter.searchDiffer.currentList[position]
+            viewModel.saveArticle(currentArticle)
+            view?.let {
+                Snackbar.make(it, "Saved", Snackbar.LENGTH_LONG).show()
+            }
+            adapter.notifyDataSetChanged()
+        }
+
+        override fun onSwipeRight(viewHolder: RecyclerView.ViewHolder) {
+            val position = viewHolder.adapterPosition
+            val currentArticle = adapter.searchDiffer.currentList[position]
+          requireContext().share(currentArticle)
+            adapter.notifyDataSetChanged()
+        }
+
+        override fun addSwipeLeftBackgroundColor(): Int = requireContext().getColor(R.color.light_blue)
+
+        override fun addSwipeRightBackgroundColor(): Int = requireContext().getColor(R.color.transparent)
+
+        override fun addSwipeLeftActionIcon(): Int = R.drawable.ic_baseline_bookmark_border_24
+
+    })
 
 }
