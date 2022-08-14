@@ -20,6 +20,10 @@
         app:navGraph="@navigation/bottom_nav_graph"
         tools:layout="@layout/search_fragment" />
 
+    <include layout="@layout/bottom_sheet_layout" />
+
+    <include layout="@layout/country_picker_layout" />
+
     <ImageButton
         android:id="@+id/btn_swipe_up"
         android:layout_width="match_parent"
