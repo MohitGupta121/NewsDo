@@ -155,7 +155,7 @@ class MainActivity : AppCompatActivity() {
         feedback.setOnClickListener {
             val emailIntent = Intent(
                 Intent.ACTION_SENDTO,
-                Uri.fromParts("mailto", "mohitsharma.2cse23@jecrc.ac.in", null)
+                Uri.fromParts("mailto", "mohitgupta7780@gmail.com", null)
             )
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Feedback")
             startActivity(Intent.createChooser(emailIntent, "Feedback"))
