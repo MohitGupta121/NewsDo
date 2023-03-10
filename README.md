@@ -3,7 +3,7 @@
 # **NewsDo** 
 
 **NewsDo** is an app easy to use like reel in instagram, News App with awesome user interface. You can save news, search news with different category and all countries news in one app.
-
+ 
 <!-- # Video Introduction 📹
 
 This is a small introduction video about Taskify  https://youtu.be/MEuoxix5SGY. -->
