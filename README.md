@@ -16,7 +16,7 @@ To know more about how I build this project, read my [Article](https://vaibhav20
 
 ***You can Install and test latest NewsDo app from below 👇***
 
-[![Taskify](https://img.shields.io/badge/NewsDo✅-APK-red.svg?style=for-the-badge&logo=android)]()
+[![NewsDo](https://img.shields.io/badge/NewsDo✅-APK-red.svg?style=for-the-badge&logo=android)]()
 
 ## Setup
 Clone the repository on your machine. Open the project on your IDE and add your api key from ![newsapi](https://newsapi.org) and everything will be setup
@@ -87,7 +87,7 @@ NewsDo lets you read news 📰 daily like instagram reels or youtube shots. It a
 
 # Package Structure
     
-    com.vaibhav.taskify    # Root Package
+    com.mohit.newsDo    # Root Package
     .
     ├── data                # For data handling.
     |   ├── local           # Room DB and its related classes
