@@ -16,10 +16,10 @@ To know more about how I build this project, read my [Article](https://vaibhav20
 
 ***You can Install and test latest NewsDo app from below 👇***
 
-[![NewsDo](https://img.shields.io/badge/NewsDo✅-APK-red.svg?style=for-the-badge&logo=android)]()
+[![NewsDo](https://img.shields.io/badge/NewsDo✅-APK-red.svg?style=for-the-badge&logo=android)](https://github.com/MohitGupta121/NewsDo/releases/download/V1/NewsDo.apk)
 
 ## Setup
-Clone the repository on your machine. Open the project on your IDE and add your api key from ![newsapi](https://newsapi.org) and everything will be setup
+Clone the repository on your machine. Open the project on your IDE and add your api key from [newsapi](https://newsapi.org) and everything will be setup
 
 ## About
 
@@ -35,15 +35,17 @@ Clone the repository on your machine. Open the project on your IDE and add your 
 
 **NewsDo** offers light as well as dark theme 🌓. So now you can use NewsDo in whatever theme you like the most. 🔥
 
-
-<!-- ![slide-1.png](media/slide-1.png) -->
+| | |
+| --- | --- |
+| <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/526ea78c-fc0d-4a25-bc26-f42ad50c3e27" height="500" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/139f7a36-2632-47ac-8d4c-222aa920f9f9" height="500" style="max-width: 100%"> |
 
 
 **NewsDo** support saved your favourite news and you can read it whenever you need.
 
+| | |
+| --- | --- |
+| <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/9de5200b-1034-470b-a03f-37a2a206adc2" height="500" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/7117823c-bc52-49db-a2df-c3da30a07332" height="500" style="max-width: 100%"> |
 
-
-<!-- ![slide-2.png](media/slide-2.png) -->
 
 This app also give to access to get the news according to your interset of field/categories and do advance search in that category.
 
@@ -56,13 +58,12 @@ NewsDo lets you read news 📰 daily like instagram reels or youtube shots. It a
 
 ## 📸 Screenshots
 
-<!-- ||||
+ ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
-| ![](media/getting_started_dark.jpg) | ![](media/login_dark.jpg) | ![](media/register_dark.jpg) |
-| ![](media/ongoing_dark.jpg)  | ![](media/upcoming_dark.jpg) | ![](media/completed_dark.jpg)    |
-| ![](media/add_task_dark.jpg) | ![](media/stats_dark.jpg)    | ![](media/profile_dark.jpg)      |
-|![](media/menu_dark.jpg)  |![](media/timer_dark.jpg)  |![](media/about_dark.jpg)      |
- -->
+| <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/139f7a36-2632-47ac-8d4c-222aa920f9f9" height="400" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/e1d9556c-3ea8-4898-8733-1409084a042c" height="400" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/13f60bbf-17f1-463d-b4db-b2977703ee31" height="400" style="max-width: 100%"> |
+| <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/741bc84d-3958-4fc6-baeb-abb1947d6bf2" height="400" style="max-width: 100%">  | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/514ac106-ee64-44cd-8898-d776f07ab081" height="400" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/9723c0d2-b6f8-4881-91c0-718af21e86b3" height="400" style="max-width: 100%">  |
+| <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/14969174-0768-4bd4-8c15-59ff242071b9" height="400" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/90ed4eac-3051-4694-96ea-dbcbb15cbfea" height="400" style="max-width: 100%"> | <img src="https://github.com/MohitGupta121/NewsDo/assets/76530270/14ef8e25-319a-4eb3-b03d-b80be66c5bf3" height="400" style="max-width: 100%"> |
+
  
 ## Built With 🛠
 - [Kotlin](https://kotlinlang.org/) - First class and official programming language for Android development.
@@ -113,7 +114,7 @@ This app uses [***MVVM (Model View View-Model)***](https://developer.android.com
 <!-- ## If you like my projects and want to support me to build more cool open source projects
   
 <a href="https://www.buymeacoffee.com/VaibhavJaiswal"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=VaibhavJaiswal&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"></a> -->
-
+<!--
 ---
 
  ## Contact
