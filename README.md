@@ -1,3 +1,5 @@
+
+https://github.com/MohitGupta121/NewsDo/assets/76530270/8367ddc1-bbb1-4835-84d1-1bbf5aea6584
 <!-- ![](media/header_dark.png) -->
 
 # **NewsDo** 
@@ -30,6 +32,13 @@ Clone the repository on your machine. Open the project on your IDE and add your 
 - It supports dark theme too 🌗.
 
 ### Insights into the app 🔎
+
+
+
+https://github.com/MohitGupta121/NewsDo/assets/76530270/faeac6a4-9a11-4714-bf45-4913ec575f62
+
+
+
 
 <!-- ![light_dark.png](media/light_dark.png) -->
 
