@@ -1,7 +1,4 @@
 
-https://github.com/MohitGupta121/NewsDo/assets/76530270/8367ddc1-bbb1-4835-84d1-1bbf5aea6584
-<!-- ![](media/header_dark.png) -->
-
 # **NewsDo** 
 
 **NewsDo** is an app easy to use like reel in instagram, News App with awesome user interface. You can save news, search news with different category and all countries news in one app.
