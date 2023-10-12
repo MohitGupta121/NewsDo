@@ -15,7 +15,6 @@ import com.google.android.material.snackbar.Snackbar
 import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.SearchRecAdapter
 import com.mohit.newsdo.util.*
-import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
 import com.mohit.newsdo.util.Constants.SEARCH_DELAY_TIME
 import com.mohit.newsdo.util.swipeDetector.ItemTouchHelperCallback
 import com.mohit.newsdo.util.swipeDetector.RecyclerViewSwipe

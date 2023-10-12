@@ -188,7 +188,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:text="Virtual News"
+            android:text="News Do"
             android:textColor="?attr/Heading_color"
             android:textSize="24sp" />
     </LinearLayout>

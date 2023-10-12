@@ -7,7 +7,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.HomeRecAdapter
 import com.mohit.newsdo.util.*
-import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
 import kotlinx.android.synthetic.main.home_fragment.*
 
 
