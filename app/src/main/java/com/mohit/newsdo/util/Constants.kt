@@ -1,7 +1,7 @@
 package com.mohit.newsdo.util
 
 object Constants {
-    const val KEY = "YOUR_API_KEY"
+    const val KEY = "173fb97ae90544e2a902f8d45315f228"
     const val BASE_URL = "https://newsapi.org"
     const val SEARCH_DELAY_TIME = 500L
     const val BUSINESS = "business"

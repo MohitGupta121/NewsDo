@@ -110,7 +110,7 @@ dependencies {
     implementation 'com.thefinestartist:finestwebview:1.2.7'
 
     //Internet connection checker
-    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
+//    implementation 'com.github.jumadeveloper:networkmanager:0.0.2'
 
     //No internet Alert
     implementation 'am.appwise.components:NoInternetDialog:1.1.3'

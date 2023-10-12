@@ -13,7 +13,6 @@ import com.mohit.newsdo.R
 import com.mohit.newsdo.adapters.SavedRecAdapter
 import com.mohit.newsdo.model.Article
 import com.mohit.newsdo.util.*
-import com.mohitsharma.virtualnews.ui.fragments.BaseFragment
 import com.mohit.newsdo.util.swipeDetector.ItemTouchHelperCallback
 import com.mohit.newsdo.util.swipeDetector.RecyclerViewSwipe
 import kotlinx.android.synthetic.main.saved_fragment.*
